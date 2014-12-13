@@ -19,11 +19,11 @@ shinyUI(
                                          value = "minimum 2 characters"),
                                br(),
                                actionButton("goButton", "Your next word is...")
-                               ),
-                   
+                  ),
+                  
                   mainPanel(h4("Prediction"),
                             verbatimTextOutput("prediction"),
                             tableOutput("view"))
-                  )          
+            )          
       )
 )

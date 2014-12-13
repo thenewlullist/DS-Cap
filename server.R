@@ -1,7 +1,8 @@
 library(shiny)
-library(ggplot2)
 source('nextword.R')
 require(stylo);require(data.table)
+#traindt<-fread("traindt.csv");traindt[,V1:=NULL]
+#setkeyv(traindt,colnames(traindt))
 
 shinyServer(function(input, output) {
       
@@ -28,6 +29,7 @@ shinyServer(function(input, output) {
             symbols(x,y, circles=radius, inches=1.6, fg="white", bg=colors()[round(rnorm(1,329,190))], xlab=NULL, ylab=NULL)
             text(x,y,labels=tb[,Word], cex=1)
       })
-
+      
 })
+
 
